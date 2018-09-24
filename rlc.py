@@ -38,6 +38,7 @@ R3 = 100.0/5.2
 i = 1
 
 def quest2R1():# R1
+  i = 1   
   while i !=(2/cmath.sqrt(L*C)):
     contador = 1  
     w = 2/(i*cmath.sqrt(C*L))
@@ -52,6 +53,7 @@ def quest2R1():# R1
   plt.show()    
 
 def quest2R2(): #R2
+  i = 1 
   while i !=(2/cmath.sqrt(L*C)):
     contador = 1  
     w = 2/(i*cmath.sqrt(C*L))
@@ -67,6 +69,7 @@ def quest2R2(): #R2
 
 #R3
 def quest2R3(): 
+  i = 1   
   while i !=(2/cmath.sqrt(L*C)):
     contador = 1  
     w = 2/(i*cmath.sqrt(C*L))
@@ -79,3 +82,22 @@ def quest2R3():
   plt.xlabel('V')
   plt.ylabel('I')
   plt.show()    
+
+def menu():    
+  opc = 0
+  while opc != -1:
+    opc = int(input())
+    if opc == 1:
+      quest1()
+    if opc == 2:
+      quest2R1()
+    if opc == 3:
+      quest2R2()
+    if opc == 4:
+      quest2R3()
+    if opc == 5:
+      opc = -1
+    opc = -1            
+
+menu()
+    
