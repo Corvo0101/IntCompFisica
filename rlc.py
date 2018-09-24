@@ -32,3 +32,14 @@ plt.xlabel('V')
 plt.ylabel('I')
 plt.show()
 
+
+#2 - Para tres valores diferentes da resistencia, R=1000/1.5,1000/2e1000/5.2, faça um gráfico de 1/|Z| vs w, para 0<w<2/LC. Utilize as funções np.max() e np.min() para determinar o valor da frequencia de resonancia.
+
+R1 = R
+R2 = 1000.0/2.0
+R3 = 100.0/5.2
+
+i = 0
+while i !=100:
+  w =   
+  i+=1
