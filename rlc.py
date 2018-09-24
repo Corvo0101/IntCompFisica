@@ -32,4 +32,3 @@ plt.xlabel('V')
 plt.ylabel('I')
 plt.show()
 
-lol
