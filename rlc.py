@@ -83,21 +83,81 @@ def quest2R3():
   plt.ylabel('I')
   plt.show()    
 
+def quest3R1():# R1
+  i = 1   
+  while i !=(2/cmath.sqrt(L*C)):
+    contador = 1  
+    w = 2/(i*cmath.sqrt(C*L))
+    mZ = cmath.sqrt(R1**2 + (((1/w*C)-w*L)**2)) #Modulo de Z
+    a[contador] = 1/mZ
+    b[contador] = w
+    i+=0.5
+    contador+=1  
+  plt.plot(a,b)
+  plt.xlabel('Theta')
+  plt.ylabel('w')
+  plt.show() 
+    
+def quest3R2(): 
+  i = 1   
+  while i !=(2/cmath.sqrt(L*C)):
+    contador = 1  
+    w = 2/(i*cmath.sqrt(C*L))
+    theta = math.atan(((1/w*C)-w*L)/R2)#Angulo theta
+    a[contador] = theta
+    b[contador] = w
+    i+=0.5
+    contador+=1  
+  plt.plot(a,b)
+  plt.xlabel('Theta')
+  plt.ylabel('w')
+  plt.show()      
+    
+    
+def quest3R3(): 
+  i = 1   
+  while i !=(2/cmath.sqrt(L*C)):
+    contador = 1  
+    w = 2/(i*cmath.sqrt(C*L))
+    mZ = cmath.sqrt(R3**2 + (((1/w*C)-w*L)**2)) #Modulo de Z
+    a[contador] = 1/mZ
+    b[contador] = w
+    i+=0.5
+    contador+=1  
+  plt.plot(a,b)
+  plt.xlabel('Theta')
+  plt.ylabel('w')
+  plt.show()     
+
 def menu():    
   opc = 0
   while opc != -1:
+    print ("Digite\n 1 - Questão 1\n 2 - Questão 2 com R1\n 3 - Questão 2 com R2\n 4 - Questão 2 com R3\n 5 - Questão 3 com R1\n 6 - Questão 3 com R2\n 7 - Questão 3 com R3\n 8 - Questão 4\n 9 - Sair")
     opc = int(input())
     if opc == 1:
       quest1()
+      menu()
     if opc == 2:
       quest2R1()
+      menu()
     if opc == 3:
       quest2R2()
+      menu()
     if opc == 4:
       quest2R3()
+      menu()
     if opc == 5:
+      quest3R1()
+      menu()
+    if opc == 6:
+      quest3R2()
+      menu()
+    if opc == 7:
+      quest3R3()
+      menu()    
+    if opc == 9:
       opc = -1
-    opc = -1            
+    opc = -1         
 
 menu()
     
